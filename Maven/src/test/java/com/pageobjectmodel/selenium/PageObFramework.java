@@ -26,6 +26,12 @@ public class PageObFramework {
 	@FindBy(how=How.XPATH,using="//input[@id='Passwd']")
 	WebElement password;
 	
+	@FindBy(id="PersistentCookie")
+	WebElement staySignedIn;
+	
+	@FindBy(id="signIn") 
+	WebElement signInBtn;
+	
 	public void loginToWebpage(String uname,String pwd)
 	{
 		username.sendKeys(uname);
@@ -33,6 +39,13 @@ public class PageObFramework {
 		WebDriverWait wait=new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='Passwd']")));
 		password.sendKeys(pwd);
+		if(staySignedIn.isSelected())
+		{
+			staySignedIn.click();
+		}
+		signInBtn.click();
+		
+		
 				
 	}
 
