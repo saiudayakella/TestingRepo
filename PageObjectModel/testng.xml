@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="HDFCLifeTests">
+  <test name="OnlinePremiumPayment">
+  <parameter name="browserType" value="Chrome"/>
+  <parameter name="appURL" value="http://www.hdfclife.com"/>
+  <parameter name="polNum" value="123456789"/>
+  <parameter name="expPageTitle" value="HDFC STANDARD LIFE"/>
+  <classes>
+  <class name="com.tests.hdfclife.PayPremiumOnlinePageTest"/>
+  </classes>
+  </test> <!-- OnlinePremiumPayment -->
+</suite> <!-- HDFCLifeTests -->
